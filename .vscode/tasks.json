@@ -1,0 +1,15 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "label": "RUN",
+         "type": "shell",
+         "command": "serve"
+      },      
+      {
+         "label": "SURGE",
+         "type": "shell",
+         "command": "surge --project ./ --domain ndh-clock.surge.sh"
+      }
+   ]
+}

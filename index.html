@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Dot Clock</title>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="shortcut icon" type="image/x-icon" href="data:image/x-icon;,">
+   <link rel="stylesheet" href="./styles.css" />
+   <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+   <canvas id="canvas-content"></canvas>
+   <div>
+      <a href="https://github.com/nhrones/Clock">See the code.</a>
+      <label for="gravity" id="gravity-value">Gravity: 15%</label>
+   </div>
+   <div>
+      <input type="range" name="gravity" id="gravity" min="1" max="100" value="15" class="slider">
+   </div>
+   <div>
+      <label for="bounce" id="bounce-value">COR Restitution: 50%</label>
+   </div>
+   <div>
+      <input type="range" name="bounce" id="bounce" min="1" max="100" value="50" class="slider">
+   </div>
+   <div>
+      <label for="velocity" id="velocity-value">Velocity: 25%</label>
+   </div>
+   <div>
+      <input type="range" name="velocity" id="velocity" min="1" max="100" value="25" class="slider">
+   </div>
+   <div>
+      <label for="trail" id="trails-value">Partical-Trails: 50%</label>
+   </div>
+   <div>
+      <input type="range" name="trail" id="trails-slider" min="1" max="100" value="50" class="slider">
+   </div>
+  
+</body>
