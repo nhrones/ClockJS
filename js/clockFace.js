@@ -8,19 +8,8 @@ import { canvasCTX, initCanvas } from './dom.js'
 import { createNumber } from './clockNumber.js' 
 import { renderDot, tickDots } from './dotPool.js'
 
-/**
- * @callback drawPixels
- * @param {number[][]} px
- * @returns {void}
- */
+/** @typedef {import('./types.js').ClockNumber} ClockNumber */
 
-/**
- * @typedef ClockNumber
- * @type {object}
- * @property {number} x 
- * @property {number} y 
- * @property {drawPixels} [drawPixels]
- */
 
 /** =====================   Clock Face   =================================
  * 
@@ -41,17 +30,14 @@ import { renderDot, tickDots } from './dotPool.js'
  * 
  ===========================================================================*/
 
+ // exported 
+export let width = 0
+export let height = 0
 
-/**  @type {number} */
-export let width
-/**  @type {number} */
-export let height
-
-// reused variables
+// internal - reused
 let hSize = 0
 let vSize = 0
-/**  @type {number} */
-let i
+let i = 0
 
 /** The current horizontal location to render to */
 let currentX = 0
@@ -71,25 +57,24 @@ export const setAlpha = (position) => {
    const maxVal = Math.log(0.025); // 90$ alpha
    const scale = (maxVal - minVal) / 100;
    alpha = (Math.exp(minVal + scale * position).toFixed(2));
-   //console.log('alpha ', alpha)
 }
 
 /**
- * A two element array of instances of the ClockNumber class.
+ * A two element array of instances of the ClockNumber type.
  * Represents the graphic display of a 2 digit 'hours' number (using a leading zero)
  * @type {ClockNumber[]}
  */
 let hours
 
 /**
- * A two element array of instances of the ClockNumber class.
+ * A two element array of instances of the ClockNumber type.
  * Represents the graphic display of a 2 digit 'minutes' number (using a leading zero)
  * @type {ClockNumber[]}
 */
 let minutes
 
 /**
- * A two element array of instances of the ClockNumber class.
+ * A two element array of instances of the ClockNumber type.
  * Represents the graphic display of a 2 digit 'seconds' number (using a leading zero)
  * @type {ClockNumber[]}
 */

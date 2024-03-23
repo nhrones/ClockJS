@@ -181,8 +181,7 @@ for (let i = 0; i <  POOL_SIZE; i++) {
    lastY[i] = 0;
    velocityX[i] = 0;
    velocityY[i] = 0;
-}
-//                                                                               
+}                                                                               
 // ==============   end of property arrrays    ==================================
 
 /** Points to the highest index that is currently set active. */
@@ -306,7 +305,7 @@ function updateDotPositions(delta) {
                tailPointer--
             }
             continue
-            // it was'nt on the floor so ... boune it off the wall
+            // it was'nt on the floor so ... bounce it off the wall
          } else {
             if (posX[i] <= Radius) { posX[i] = Radius }
             if (posX[i] >= (width)) { posX[i] = width }
@@ -318,14 +317,14 @@ function updateDotPositions(delta) {
       // did we hit the floor? If so, bounce it off the floor
       if (posY[i] >= height) {
          posY[i] = height
-         // bounce it off the floor (restitution represents bounciness)
+         // restitution represents bounciness
          velocityY[i] *= -CTX.Restitution
       }
 
       // did we hit the ceiling? If so, bounce it off the ceiling
       if (posY[i] <= Radius) {
          posY[i] = Radius
-         // bounce it off the ceiling (restitution represents bounciness)
+         // restitution represents bounciness
          velocityY[i] *= -CTX.Restitution
       }
 

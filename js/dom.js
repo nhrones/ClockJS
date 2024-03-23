@@ -1,8 +1,6 @@
-/// <reference lib="dom" />
+
 import { CTX } from './dotPool.js';
 import { setAlpha } from "./clockFace.js";
-
-// a utility to save a few keystrokes
 
 /**
  *a utility to save a few keystrokes

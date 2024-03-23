@@ -8,19 +8,8 @@ import {
 
 import { renderDot, activateDot } from './dotPool.js'
 
-/**
- * @callback drawPixels
- * @param {number[][]} px
- * @returns {void}
- */
+/** @typedef {import('./types.js').ClockNumber} ClockNumber */
 
-/**
- * @typedef ClockNumber
- * @type {object}
- * @property {number} x 
- * @property {number} y 
- * @property {drawPixels} [drawPixels]
- */
 
 let dot = { x: 0, y: 0 }
 
