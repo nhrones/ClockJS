@@ -16,4 +16,3 @@ Below the clock are four slider controls. Try moving each slider to change the a
 The **_partical-trails_** slider is most interesting. It controls the RGBA alpha channel to gradually fade out trails. The higher the slider value, the less trail fade.   
 
 ## Run Online
-https://ndh-clock.surge.sh/
