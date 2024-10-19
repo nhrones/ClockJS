@@ -4,12 +4,8 @@
       {
          "label": "RUN",
          "type": "shell",
-         "command": "serve"
-      },      
-      {
-         "label": "SURGE",
-         "type": "shell",
-         "command": "surge --project ./ --domain ndh-clock.surge.sh"
+         "command": "serve",
+         "args": ["80"]
       }
    ]
 }

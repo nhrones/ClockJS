@@ -460,3 +460,5 @@ function renderFreeDot (i) {
 function randomVelocity  () {
   return (Math.random() - 0.4) * CTX.MaxVelocity;
 }
+
+const a = randomVelocity()
